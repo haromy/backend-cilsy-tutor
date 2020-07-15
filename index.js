@@ -21,5 +21,9 @@ app.get('/', (req, res) => {
 
 app.get('/books', books.getAll);
 app.post('/books', books.createBook);
+app.get('/books/:id', books.get_detail_by_id);
+app.put('/books/:id', books.updated_by_id);
+app.delete('/books/:id', books.delete_by_id);
+app.post('/books/bulk_delete', books.delete_bulk_by_judul);
 
-app.listen(port, () => console.log(`listen ini port ${port}`));
+app.listen(port, () => console.log(`listen in port ${port}`));
